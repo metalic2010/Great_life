@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components'
 import MySubstrateDiv from '../UI/Substrate/Substrate';
-import GroupCatMenuBlock from '../contents/groupCatMenu'; 
+import GroupCatMenuBlock from './groupCatMenu'; 
+import UsefullArticlesBlock from './usefulArticles';
+import H1NameBlock from '../UI/headlines/H1NameBlock';
 
 const MyContents = styled.div`
     position: absolute;
@@ -16,26 +18,17 @@ const MyContentsWorkBlockSite = styled.div`
     display: inliner-flex;
 `
 
-const H1CatMenu = styled.h1`
-    font-style: normal;
-    font-weight: 800;
-    font-size: 30px;
-    padding-top: 25px;
-    display: flex;
-    justify-content: center;
-    font-size: 24px;
-`
-
 function ContentBlock() {
     return (
         <MyContents>
             <MyContentsWorkBlockSite>
                 <MySubstrateDiv>
-                    <H1CatMenu>
+                    <H1NameBlock>
                         Категория блюд
-                    </H1CatMenu>
+                    </H1NameBlock>
                     <GroupCatMenuBlock />
                 </MySubstrateDiv>
+                <UsefullArticlesBlock />
             </MyContentsWorkBlockSite>
         </MyContents>
     );

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 let h = "50px";
 
 const MyFooters = styled.footer`
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 100%;
     height: ${h};

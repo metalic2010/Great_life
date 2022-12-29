@@ -1,3 +1,5 @@
+import React from 'react';
+
 import HeaderBlock from './components/headers/headers';
 import FooterBlock from './components/footers/footers';
 import ContentBlock from './components/contents/contents';

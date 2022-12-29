@@ -9,10 +9,10 @@ const ButtonCatMenuBlock = styled.div`
 const ButtonCatMenu = styled.div`
     width: 130px;
     height: 130px;
-    border: 1px solid #2E1E1E;
+    ${({ border }) => border && 'border: 1px solid #2E1E1E'};
     border-radius: 100px;
     margin: 10px;
-    background-image: ${({ background }) => `url(./images/${ background })` || 'none'};
+    background-image: ${({ background }) => `url(./images/Category/${ background })` || 'none'};
     background-size: 150px;
     background-repeat: no-repeat;
     background-position: center;
