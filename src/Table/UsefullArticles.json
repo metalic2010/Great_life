@@ -1,7 +1,7 @@
 [
     {
         "Id": 1,
-        "Title": "💥лови рецепт💥-Ананасовый желейный тортик без выпечки",
+        "Title": "Рецепт: Ананасовый желейный тортик без выпечки",
         "ArticleText": "text1.txt",
         "img": "pic1.jpg"
     },
@@ -14,6 +14,24 @@
     {
         "Id": 3,
         "Title": "Крахмалы «с тёмной стороны»",
+        "ArticleText": "text3.txt",
+        "img": "pic3.jpg"
+    },
+    {
+        "Id": 4,
+        "Title": "Title4",
+        "ArticleText": "text3.txt",
+        "img": "pic3.jpg"
+    },
+    {
+        "Id": 5,
+        "Title": "Title5",
+        "ArticleText": "text3.txt",
+        "img": "pic3.jpg"
+    },
+    {
+        "Id": 6,
+        "Title": "Title6",
         "ArticleText": "text3.txt",
         "img": "pic3.jpg"
     }

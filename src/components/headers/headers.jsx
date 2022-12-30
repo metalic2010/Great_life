@@ -6,11 +6,8 @@ import styled from 'styled-components'
 import img from '../UI/Logo/Logo.svg';
 
 const MyHeaders = styled.header`
-  position: absolute;
   width: 100%;
   height: 88px;
-  left: 0px;
-  top: 0px;
   background: #FFFFFF;
   box-shadow: 0px 0px 10px 5px rgba(151, 150, 150, 0.25);
   border-radius: 0px 0px 25px 25px;

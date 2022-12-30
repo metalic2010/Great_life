@@ -4,6 +4,9 @@ import { handleClick } from '../../../utils/handleClick';
 
 const ButtonCatMenuBlock = styled.div`
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 const ButtonCatMenu = styled.div`
@@ -22,6 +25,9 @@ const NameCatMenu = styled.h2`
     display: flex;
     justify-content: center;
     font-size: 18px;
+    text-align: center;
+    width: 130px;
+    margin-top: 0px;
 `
 
 /**

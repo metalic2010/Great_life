@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import MyButtonCatMenu from '../UI/Button/MyButtonCatMenu';
-import dataJSON from '../../Table/NameCategory.json';
+import dataJSON from '../../table/NameCategory.json';
 import { myRenderMap } from '../../utils/MyRenderMap';
 
 const MyGroupCategoryMenu = styled.div`

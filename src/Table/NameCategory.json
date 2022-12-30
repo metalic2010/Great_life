@@ -6,36 +6,56 @@
     },
     {
         "Id": 2,
+        "NameCategory": "Вегетарианские блюда",
+        "img": "Category_vegan.svg"
+    },
+    {
+        "Id": 3,
         "NameCategory": "Супы",
         "img": "Category_soup.svg"
     },
     {
-        "Id": 3,
+        "Id": 4,
         "NameCategory": "Рыбные блюда",
         "img": "Category_fishDishes.svg"
     },
     {
-        "Id": 4,
-        "NameCategory": "Мясные блюда",
-        "img": "Category_meatDishes.svg"
+        "Id": 5,
+        "NameCategory": "Блюда из птицы",
+        "img": "Category_poultryDishes.svg"
     },
     {
-        "Id": 5,
+        "Id": 6,
+        "NameCategory": "Блюда из говядины",
+        "img": "Category_beefDishes.svg"
+    },
+    {
+        "Id": 7,
+        "NameCategory": "Блюда из свинины",
+        "img": "Category_porkDishes.svg"
+    },
+    {
+        "Id": 8,
+        "NameCategory": "Соленья",
+        "img": "Category_pickles.svg"
+    },
+    {
+        "Id": 9,
         "NameCategory": "Закуски",
         "img": "Category_shacks.svg"
     },
     {
-        "Id": 6,
+        "Id": 10,
         "NameCategory": "Выпечка",
         "img": "Category_bakery.svg"
     },
     {
-        "Id": 7,
+        "Id": 11,
         "NameCategory": "Десерты",
         "img": "Category_dessert.svg"
     },
     {
-        "Id": 8,
+        "Id": 12,
         "NameCategory": "Напитки",
         "img": "Category_drink.svg"
     }

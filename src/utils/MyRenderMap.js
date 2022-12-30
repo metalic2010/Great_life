@@ -1,8 +1,14 @@
-export const myRenderMap = (dataJSON, num, count) => {
+/**
+ * @param {*} dataJSON информация которую необходимо отобразить
+ * @param {*} numRow количество информации в 1 строку
+ * @param {*} count сколько всего нужно достать информации
+ * @returns возвращает массив
+ */
+export const myRenderMap = (dataJSON, numRow, count) => {
     if (count) {
         return dataJSON.reduce(
             (prev, el, i) => {
-                const subIdx = Math.floor(i / num);
+                const subIdx = Math.floor(i / numRow);
                 prev[subIdx] = [...(prev[subIdx] || []), el];
                 return prev;
             },
@@ -11,7 +17,7 @@ export const myRenderMap = (dataJSON, num, count) => {
     } else {
         return dataJSON.reduce(
             (prev, el, i) => {
-                const subIdx = Math.floor(i / num);
+                const subIdx = Math.floor(i / numRow);
                 prev[subIdx] = [...(prev[subIdx] || []), el];
                 return prev;
             },
