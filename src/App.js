@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setStateModal } from './store/modalSlice';
 import HeaderBlock from './components/headers/headers';
 import FooterBlock from './components/footers/footers';
 import ContentBlock from './components/contents/contents';
@@ -7,8 +9,10 @@ import MyModal from './components/UI/Modal/MyModal';
 import About from './pages/About';
 
 function App() {
-  const [modalActive, setModalActive] = useState(false);
-
+  const modalDispatch = useDispatch();
+  const modalActive = useSelector(state => state.modal);
+  const setModalActive = () => modalDispatch(setStateModal());
+  
   return (
     <div>
       <MyModal

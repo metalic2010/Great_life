@@ -47,7 +47,7 @@ const H1NameSite = styled.h1`
   align-items: center;
 `
 
-function HeaderBlock() {
+function HeaderBlock({ setVisibleAbout }) {
   return (
     <MyHeaders>
         <HeaderWorkBlockSite>

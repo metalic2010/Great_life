@@ -25,7 +25,7 @@ const MyModal = ({ children, visible, setVisible }) => {
     return (
         <MyModalBlock
             active={(visible) ? 'flex' : 'none'}
-            onClick={() => setVisible(false)}
+            onClick={() => setVisible().payload}
         >
             <MyModalContent onClick={(e) => e.stopPropagation()}>
                 {children}

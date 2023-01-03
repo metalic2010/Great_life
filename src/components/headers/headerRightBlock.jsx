@@ -1,5 +1,6 @@
 import React from 'react';
-import { handleClick } from '../../utils/handleClick';
+import { useDispatch } from 'react-redux';
+import { setStateModal } from '../../store/modalSlice';
 import MyJumpButton from '../UI/Button/MyJumpButton';
 import MySearchInput from '../UI/Input/MySearchInput';
 import styled from 'styled-components'
@@ -15,6 +16,9 @@ const MyHeaderRightBlock = styled.div`
 `
 
 const HeaderRightBlock = () => {
+    const modalDispatch = useDispatch();
+    const setModalActive = () => modalDispatch(setStateModal());
+
     return (
         <MyHeaderRightBlock>
             <MySearchInput 
@@ -27,7 +31,7 @@ const HeaderRightBlock = () => {
                 border="1px solid #2E1E1E"
                 font_size="15px"
                 height="5px"
-                onClick={() => handleClick("#")}
+                onClick={() => setModalActive().payload}
             >
                 О нас
             </MyJumpButton>
