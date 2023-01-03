@@ -19,13 +19,15 @@ const MyRenderCategoryMenu = (num) => {
             {
                 data.map((row, i) => (
                     <MyGroupCategoryMenu key={i}>
-                        {row.map((item, k) => (
-                            <MyButtonCatMenu
-                                key={item.Id}
-                                background={item.img}
-                                children={item.NameCategory}
-                            />
-                        ))}
+                        {
+                            row.map((item, k) => (
+                                <MyButtonCatMenu
+                                    key={item.Id}
+                                    background={item.img}
+                                    children={item.NameCategory}
+                                />
+                            ))
+                        }
                     </MyGroupCategoryMenu>
                 ))
             }

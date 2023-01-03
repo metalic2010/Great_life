@@ -1,7 +1,9 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { handleClick } from '../../utils/handleClick';
+import { setStateMenu } from '../../store/menuSlice';
 import MyJumpButton from '../UI/Button/MyJumpButton';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 
 const MyMenuBlock = styled.div`
@@ -16,13 +18,16 @@ const MyMenuBlock = styled.div`
 
 
 const MenuBlock = () => {
+    const menuDispatch = useDispatch();
+    const setMenuActive = () => menuDispatch(setStateMenu());
+
     return (
         <MyMenuBlock>
             <MyJumpButton
                 className="fa fa-bars"
                 border_radius="0px"
-                onClick={() => handleClick("#")}
-            ></MyJumpButton>
+                onClick={() => setMenuActive().payload}
+            />
         </MyMenuBlock>
     );
 }

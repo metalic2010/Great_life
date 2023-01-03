@@ -5,11 +5,10 @@ const MyContents = styled.div`
     width: 100%;
 `
 
-const MyContentsWorkBlockSite = styled.div`   
+const MyContentsWorkBlockSite = styled.div`  
     margin: 20px auto;
     width: 100vw;
     max-width: 1000px;
-    display: inliner-flex;
 `
 
 function ContentBlock({ children }) {

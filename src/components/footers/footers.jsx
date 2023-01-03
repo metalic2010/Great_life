@@ -9,6 +9,8 @@ const MyFooters = styled.footer`
     background: #242424;
     border-radius: 25px 25px 0px 0px;
     box-shadow: 0px 0px 10px 5px rgba(151, 150, 150, 0.25);
+    position: relative;
+    z-index: 2;
 `
 
 const MyFootersWorkBlockSite = styled.div`

@@ -1,0 +1,22 @@
+[
+    {
+        "Id": 1,
+        "Name": "Главная",
+        "Link": "/"
+    },
+    {
+        "Id": 2,
+        "Name": "Категории блюд",
+        "Link": "/CategoryMenu"
+    },
+    {
+        "Id": 3,
+        "Name": "Полезные статьи",
+        "Link": "/UsefullArtifical"
+    },
+    {
+        "Id": 4,
+        "Name": "О нас",
+        "Link": "/About"
+    }
+]

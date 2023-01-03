@@ -1,0 +1,74 @@
+[
+    {
+        "Id": 1,
+        "ParentId": 2,
+        "Name": "Салаты",
+        "Link": "/Salad"
+    },
+    {
+        "Id": 2,
+        "ParentId": 2,
+        "Name": "Супы",
+        "Link": "/Soup"
+    },
+    {
+        "Id": 3,
+        "ParentId": 2,
+        "Name": "Вегетарианские блюда",
+        "Link": "/Vegan"
+    },
+    {
+        "Id": 4,
+        "ParentId": 2,
+        "Name": "Рыбные блюда",
+        "Link": "/Fish"
+    },
+    {
+        "Id": 5,
+        "ParentId": 2,
+        "Name": "Блюда из птицы",
+        "Link": "/Poultry"
+    },
+    {
+        "Id": 6,
+        "ParentId": 2,
+        "Name": "Блюда из говядины",
+        "Link": "/Beef"
+    },
+    {
+        "Id": 7,
+        "ParentId": 2,
+        "Name": "Блюда из свинины",
+        "Link": "/Pork"
+    },
+    {
+        "Id": 8,
+        "ParentId": 2,
+        "Name": "Соленья",
+        "Link": "/Pickles"
+    },
+    {
+        "Id": 9,
+        "ParentId": 2,
+        "Name": "Закуски",
+        "Link": "/Snacks"
+    },
+    {
+        "Id": 10,
+        "ParentId": 2,
+        "Name": "Выпечка",
+        "Link": "/Bakery"
+    },
+    {
+        "Id": 11,
+        "ParentId": 2,
+        "Name": "Десерты",
+        "Link": "/Desserts"
+    },
+    {
+        "Id": 12,
+        "ParentId": 2,
+        "Name": "Напитки",
+        "Link": "/Drink"
+    }
+]

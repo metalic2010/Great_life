@@ -11,6 +11,8 @@ const MyHeaders = styled.header`
   background: #FFFFFF;
   box-shadow: 0px 0px 10px 5px rgba(151, 150, 150, 0.25);
   border-radius: 0px 0px 25px 25px;
+  position: relative;
+  z-index: 2;
 `
 
 const HeaderWorkBlockSite = styled.div`
@@ -50,12 +52,12 @@ const H1NameSite = styled.h1`
 function HeaderBlock({ setVisibleAbout }) {
   return (
     <MyHeaders>
-        <HeaderWorkBlockSite>
-          <MenuBlock />
-          <MyLogo onClick={() => handleClick("#")}></MyLogo>
-          <H1NameSite>Отличная жизнь</H1NameSite>
-          <HeaderRightBlock />
-        </HeaderWorkBlockSite>
+      <HeaderWorkBlockSite>
+        <MenuBlock />
+        <MyLogo onClick={() => handleClick("#")}></MyLogo>
+        <H1NameSite>Отличная жизнь</H1NameSite>
+        <HeaderRightBlock />
+      </HeaderWorkBlockSite>
     </MyHeaders>
   );
 }
