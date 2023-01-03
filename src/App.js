@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setStateModal } from './store/modalSlice';
 import HeaderBlock from './components/headers/headers';
@@ -14,7 +15,7 @@ function App() {
   const setModalActive = () => modalDispatch(setStateModal());
   
   return (
-    <div>
+    <BrowserRouter>
       <MyModal
         visible={modalActive}
         setVisible={setModalActive}
@@ -26,7 +27,7 @@ function App() {
         <MainPage />
       </ContentBlock>
       <FooterBlock />
-    </div>
+    </BrowserRouter>
   );
 }
 
