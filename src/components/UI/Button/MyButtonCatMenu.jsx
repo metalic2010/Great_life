@@ -1,12 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import { handleClick } from '../../../utils/handleClick';
 
-const ButtonCatMenuBlock = styled.div`
+const ButtonCatMenuBlock = styled(Link)`
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
+    color: #2E1E1E;
 `
 
 const ButtonCatMenu = styled.div`
@@ -34,9 +37,9 @@ const NameCatMenu = styled.h2`
  * @param {*} props принимает своства и методы для объекта, например: onClick
  * @returns возвращает красивую кнопку
  */
-const MyButtonCatMenu = ({ children, ...props }) => {
+const MyButtonCatMenu = ({ children, linkTo, ...props }) => {
     return (
-        <ButtonCatMenuBlock onClick={() => handleClick("#")}>
+        <ButtonCatMenuBlock to={linkTo}>
             <ButtonCatMenu {...props} />
             <NameCatMenu>
                 {children}

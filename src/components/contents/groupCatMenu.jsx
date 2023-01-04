@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import MyButtonCatMenu from '../UI/Button/MyButtonCatMenu';
 import dataJSON from '../../table/NameCategory.json';
+import dataJSONLink from '../../table/SubMenu.json';
 import { myRenderMap } from '../../utils/MyRenderMap';
 
 const MyGroupCategoryMenu = styled.div`
@@ -25,6 +26,7 @@ const MyRenderCategoryMenu = (num) => {
                                     key={item.Id}
                                     background={item.img}
                                     children={item.NameCategory}
+                                    linkTo={dataJSONLink.filter((ilink) => ilink.Id === item.Id)[0].Link}
                                 />
                             ))
                         }

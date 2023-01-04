@@ -54,7 +54,7 @@ function HeaderBlock({ setVisibleAbout }) {
     <MyHeaders>
       <HeaderWorkBlockSite>
         <MenuBlock />
-        <MyLogo onClick={() => handleClick("#")}></MyLogo>
+        <MyLogo onClick={() => handleClick("/")}></MyLogo>
         <H1NameSite>Отличная жизнь</H1NameSite>
         <HeaderRightBlock />
       </HeaderWorkBlockSite>
