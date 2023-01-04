@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -46,7 +46,35 @@ const MyLink = styled(Link)`
     font-weight: bold;
 `
 
-const MyNavbar = ({ items, visible, setVisible }) => {
+const MySubLink = styled(Link)`
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    margin: 10px 10px 10px 20px;
+    font-size: 15px;
+    color: #2E1E1E;
+    font-weight: bold;
+`
+
+const MySubMenu = styled.div`
+    display: ${({ subActive }) => subActive};
+`
+
+/**
+ * 
+ * @param {*} items - список меню
+ * @param {*} subItems - вложенный список 
+ * @param {*} visible - параметр для показа меню
+ * @param {*} setVisible - функция для показа меню (смены состояния)
+ * @returns возвращает jsx элемент для отрисовки на странице
+ * @description navbar имеет всего 2 уровня и передаётся через 2 props
+ */
+const MyNavbar = ({ items, subItems, visible, setVisible }) => {
+    const [subVisible, setSubVisible] = useState(false);
+
     return (
         <Navbar
             active={(visible) ? 'block' : 'none'}
@@ -56,12 +84,36 @@ const MyNavbar = ({ items, visible, setVisible }) => {
                 <NavbarWorkBlock onClick={(e) => e.stopPropagation()}>
                     {
                         items.map((item) => (
-                            <MyLink
-                                key={item.Id}
-                                to={item.Link}
-                            >
-                                {item.Name}
-                            </MyLink>
+                            <Fragment key={item.Id + 1}>
+                                <MyLink
+                                    key={item.Id}
+                                    to={item.Link}
+                                    onClick={() => setSubVisible(!subVisible)}
+                                >
+                                    {item.Name}
+                                </MyLink>
+                                {
+                                    (item.SubItem)
+                                        ? <MySubMenu
+                                            key={item.Id + 1}
+                                            subActive={(subVisible) ? 'block' : 'none'}
+                                        >
+                                            {
+                                                subItems
+                                                    .filter((subItem) => subItem.ParentId = item.Id)
+                                                    .map((subItem) => (
+                                                        <MySubLink
+                                                            key={subItem.Id}
+                                                            to={subItem.Link}
+                                                        >
+                                                            {subItem.Name}
+                                                        </MySubLink>
+                                                    ))
+                                            }
+                                        </MySubMenu>
+                                        : ""
+                                }
+                            </Fragment>
                         ))
                     }
                 </NavbarWorkBlock>

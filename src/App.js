@@ -11,6 +11,7 @@ import MyModal from './components/UI/Modal/MyModal';
 import About from './pages/About';
 import MyNavbar from './components/UI/Navbar/Navbar';
 import DataJSONMenu from './table/Menu.json';
+import DataJSONSubMenu from './table/SubMenu.json';
 
 function App() {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ function App() {
         visible={menuActive}
         setVisible={setMenuActive}
         items={DataJSONMenu}
+        subItems={DataJSONSubMenu}
       />
       <ContentBlock>
         <MainPage />

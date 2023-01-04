@@ -15,7 +15,7 @@ const MyRenderCategoryMenu = (num) => {
     const data = myRenderMap(dataJSON, num);
 
     return (
-        <div>
+        <>
             {
                 data.map((row, i) => (
                     <MyGroupCategoryMenu key={i}>
@@ -31,15 +31,15 @@ const MyRenderCategoryMenu = (num) => {
                     </MyGroupCategoryMenu>
                 ))
             }
-        </div>
+        </>
     )
 }
 
 function GroupCatMenuBlock() {
     return (
-        <div>
+        <>
             {MyRenderCategoryMenu(4)}
-        </div>
+        </>
     );
 }
 

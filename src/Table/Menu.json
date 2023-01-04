@@ -2,21 +2,25 @@
     {
         "Id": 1,
         "Name": "Главная",
-        "Link": "/"
+        "Link": "/",
+        "SubItem": false
     },
     {
         "Id": 2,
         "Name": "Категории блюд",
-        "Link": "/CategoryMenu"
+        "Link": "/",
+        "SubItem": true
     },
     {
         "Id": 3,
         "Name": "Полезные статьи",
-        "Link": "/UsefullArtifical"
+        "Link": "/UsefullArtifical",
+        "SubItem": false
     },
     {
         "Id": 4,
         "Name": "О нас",
-        "Link": "/About"
+        "Link": "/About",
+        "SubItem": false
     }
 ]
