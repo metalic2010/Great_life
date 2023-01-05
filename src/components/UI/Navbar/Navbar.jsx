@@ -75,23 +75,37 @@ const MySubMenu = styled.div`
 const MyNavbar = ({ items, subItems, visible, setVisible }) => {
     const [subVisible, setSubVisible] = useState(false);
 
+    const SetVisibleMenu = (e, SubItem) => {
+        if (SubItem) { setSubVisible(!subVisible) }
+        if (!SubItem) { e.startPropagation() }
+    }
+
     return (
         <Navbar
             active={(visible) ? 'block' : 'none'}
-            onClick={() => setVisible().payload}
+            onClick={() => setVisible()}
         >
             <NavbarBlock>
                 <NavbarWorkBlock onClick={(e) => e.stopPropagation()}>
                     {
                         items.map((item) => (
                             <Fragment key={item.Id + 1}>
-                                <MyLink
-                                    key={item.Id}
-                                    to={item.Link}
-                                    onClick={() => setSubVisible(!subVisible)}
-                                >
-                                    {item.Name}
-                                </MyLink>
+                                {
+                                    (item.SubItem)
+                                        ? <MyLink
+                                            key={item.Id}
+                                            onClick={(e) => SetVisibleMenu(e, item.SubItem)}
+                                        >
+                                            {item.Name}
+                                        </MyLink>
+                                        : <MyLink
+                                            key={item.Id}
+                                            to={item.Link}
+                                            onClick={(e) => SetVisibleMenu(e, item.SubItem)}
+                                        >
+                                            {item.Name}
+                                        </MyLink>
+                                }
                                 {
                                     (item.SubItem)
                                         ? <MySubMenu
@@ -105,6 +119,7 @@ const MyNavbar = ({ items, subItems, visible, setVisible }) => {
                                                         <MySubLink
                                                             key={subItem.Id}
                                                             to={subItem.Link}
+                                                            onClick={(e) => SetVisibleMenu(e, !item.SubItem)}
                                                         >
                                                             {subItem.Name}
                                                         </MySubLink>

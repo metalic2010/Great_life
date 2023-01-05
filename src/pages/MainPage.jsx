@@ -6,7 +6,7 @@ import H1NameBlock from '../components/UI/headlines/H1NameBlock';
 
 function MainPage() {
     return (
-        <div>
+        <>
             <MySubstrateDiv>
                 <H1NameBlock>
                     Категория блюд
@@ -14,7 +14,7 @@ function MainPage() {
                 <GroupCatMenuBlock />
             </MySubstrateDiv>
             <UsefullArticlesBlock />
-        </div>
+        </>
     );
 }
 

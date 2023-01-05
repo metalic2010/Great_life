@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
-const JumpButton = styled.div`
+const JumpButton = styled(Link)`
     text-decoration: none;
     padding: 15px 25px;
     border-radius: ${props => props.border_radius || '100px'};
@@ -13,7 +14,7 @@ const JumpButton = styled.div`
     cursor: pointer;
     border: ${props => props.border || 'none'};
     display: flex;
-    margin: auto 0 0 0;
+    margin: ${props => props.margin || 'auto 0 0 0'};
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
@@ -21,6 +22,11 @@ const JumpButton = styled.div`
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
 `
 

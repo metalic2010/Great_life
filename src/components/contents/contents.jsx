@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const MyContents = styled.div`
     width: 100%;
+    min-height: calc(100vh - 158px);
 `
 
 const MyContentsWorkBlockSite = styled.div`  

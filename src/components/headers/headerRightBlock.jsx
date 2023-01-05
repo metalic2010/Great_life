@@ -31,7 +31,7 @@ const HeaderRightBlock = () => {
                 border="1px solid #2E1E1E"
                 font_size="15px"
                 height="5px"
-                onClick={() => setModalActive().payload}
+                onClick={() => setModalActive()}
             >
                 О нас
             </MyJumpButton>

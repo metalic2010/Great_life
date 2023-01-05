@@ -16,7 +16,7 @@ const MyModalBlock = styled.div`
 `
 
 const MyModalContent = styled.div`
-    padding: 25px;
+    padding: 0px 25px 25px 25px;
     background: white;
     border-radius: 16px;
 `
