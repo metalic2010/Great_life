@@ -34,19 +34,19 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <MyModal
-        visible={modalActive}
-        setVisible={setModalActive}
-      >
-        <AboutPage />
-      </MyModal>
+      {modalActive && <MyModal
+          setVisible={setModalActive}
+        >
+          <AboutPage />
+        </MyModal>
+      }
       <HeaderBlock />
-      <MyNavbar
-        visible={menuActive}
+      {menuActive && <MyNavbar
         setVisible={setMenuActive}
         items={DataJSONMenu}
         subItems={DataJSONSubMenu}
       />
+      }
       <ContentBlock>
         <AppRouter />
       </ContentBlock>

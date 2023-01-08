@@ -2,7 +2,7 @@ import React from 'react';
 import MenuBlock from './menuBlock';
 import { handleClick } from '../../utils/handleClick';
 import HeaderRightBlock from "./headerRightBlock";
-import styled from 'styled-components'
+import styled from 'styled-components';
 import img from '../UI/Logo/Logo.svg';
 
 const MyHeaders = styled.header`

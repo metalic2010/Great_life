@@ -7,6 +7,8 @@ import { myRenderMap } from '../../utils/MyRenderMap';
 import { txtShowMore } from '../../utils/txtShowMore';
 import MyJumpButton from '../UI/Button/MyJumpButton';
 import MyJumpSplashButton from '../UI/Button/MyJumpSplashButton';
+import { useDispatch, useSelector } from 'react-redux';
+import { setStateMenu } from '../../store/menuSlice';
 
 const MyUsefullArticles = styled.div`
     display: flex;
@@ -78,6 +80,11 @@ const MyArctificalBlock = (numRow, count) => {
 }
 
 function UsefullArticlesBlock() {
+    const dispatch = useDispatch();
+  
+    const menuActive = useSelector(state => state.menu);
+    const setMenuActive = () => dispatch(setStateMenu());
+
     return (
         <MyUsefullArticles>
             <H1NameBlock padding_top="15px">
@@ -89,6 +96,7 @@ function UsefullArticlesBlock() {
                 height="15px"
                 margin="5px 0 0 0"
                 to={"/UsefullArtifical"}
+                onClick={() => setMenuActive(false)}
             >
                 Больше полезных статей...
             </StyleJumpButton>

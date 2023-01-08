@@ -18,6 +18,7 @@ const JumpButton = styled(Link)`
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+    transition: all .2s;
 
     &:hover {
         transform: translateY(-3px);

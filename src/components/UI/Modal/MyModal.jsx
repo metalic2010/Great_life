@@ -9,7 +9,7 @@ const MyModalBlock = styled.div`
     bottom: 0;
     right: 0;
     left: 0;
-    display: ${({ active }) => active};
+    display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(0,0,0, 0.5);

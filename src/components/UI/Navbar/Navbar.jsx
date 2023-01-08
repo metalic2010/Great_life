@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -6,9 +6,11 @@ const Navbar = styled.div`
     position: absolute;
     top: 0px;
     min-height: 100vh;
+    height: ${({height}) => `${height}px` || '100vh'};
     width: 100%;
     z-index: 1;
-    display: ${({ active }) => active};
+    display: block;
+    transition: all .4s;
 `
 
 const NavbarBlock = styled.div`
@@ -18,7 +20,7 @@ const NavbarBlock = styled.div`
     flex-direction: column;
     margin: 0 auto;
     max-width: 1000px;
-    height: 100vh;
+    height: 100%;
 `
 const NavbarWorkBlock = styled.nav`
     position: absolute;
@@ -28,7 +30,7 @@ const NavbarWorkBlock = styled.nav`
     flex-direction: column;
     padding: 100px 20px 0px 10px;
     max-width: 280px;
-    height: 100vh;
+    height: 100%;
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 5px 10px rgba(151, 150, 150, 0.25);
 `
@@ -60,7 +62,8 @@ const MySubLink = styled(Link)`
 `
 
 const MySubMenu = styled.div`
-    display: ${({ subActive }) => subActive};
+    display: block;
+    transition: all .4s;
 `
 
 /**
@@ -74,15 +77,18 @@ const MySubMenu = styled.div`
  */
 const MyNavbar = ({ items, subItems, visible, setVisible }) => {
     const [subVisible, setSubVisible] = useState(false);
+    const [height, setHeight] = useState(0);
 
     const SetVisibleMenu = (e, SubItem) => {
         if (SubItem) { setSubVisible(!subVisible) }
         if (!SubItem) { e.startPropagation() }
     }
 
+    useEffect( () => { setHeight(document.documentElement.scrollHeight - 150) }, []);
+
     return (
         <Navbar
-            active={(visible) ? 'block' : 'none'}
+            height={height}
             onClick={() => setVisible()}
         >
             <NavbarBlock>
@@ -107,26 +113,21 @@ const MyNavbar = ({ items, subItems, visible, setVisible }) => {
                                         </MyLink>
                                 }
                                 {
-                                    (item.SubItem)
-                                        ? <MySubMenu
-                                            key={item.Id + 1}
-                                            subActive={(subVisible) ? 'block' : 'none'}
-                                        >
-                                            {
-                                                subItems
-                                                    .filter((subItem) => subItem.ParentId = item.Id)
-                                                    .map((subItem) => (
-                                                        <MySubLink
-                                                            key={subItem.Id}
-                                                            to={subItem.Link}
-                                                            onClick={(e) => SetVisibleMenu(e, !item.SubItem)}
-                                                        >
-                                                            {subItem.Name}
-                                                        </MySubLink>
-                                                    ))
-                                            }
-                                        </MySubMenu>
-                                        : ""
+                                    item.SubItem && subVisible && <MySubMenu key={item.Id + 1}>
+                                        {
+                                            subItems
+                                                .filter((subItem) => subItem.ParentId = item.Id)
+                                                .map((subItem) => (
+                                                    <MySubLink
+                                                        key={subItem.Id}
+                                                        to={subItem.Link}
+                                                        onClick={(e) => SetVisibleMenu(e, !item.SubItem)}
+                                                    >
+                                                        {subItem.Name}
+                                                    </MySubLink>
+                                                ))
+                                        }
+                                    </MySubMenu>
                                 }
                             </Fragment>
                         ))
