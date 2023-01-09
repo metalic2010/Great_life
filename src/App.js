@@ -42,10 +42,10 @@ function App() {
       }
       <HeaderBlock />
       {menuActive && <MyNavbar
-        setVisible={setMenuActive}
-        items={DataJSONMenu}
-        subItems={DataJSONSubMenu}
-      />
+          setVisible={setMenuActive}
+          items={DataJSONMenu}
+          subItems={DataJSONSubMenu}
+        />
       }
       <ContentBlock>
         <AppRouter />

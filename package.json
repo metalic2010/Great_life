@@ -1,6 +1,6 @@
 {
-  "name": "chanel-great-life",
-  "version": "0.1.0",
+  "name": "great-life",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",

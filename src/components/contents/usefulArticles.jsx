@@ -83,7 +83,7 @@ function UsefullArticlesBlock() {
     const dispatch = useDispatch();
   
     const menuActive = useSelector(state => state.menu);
-    const setMenuActive = () => dispatch(setStateMenu());
+    const setMenuActive = (visible) => dispatch(setStateMenu(visible));
 
     return (
         <MyUsefullArticles>
@@ -95,8 +95,8 @@ function UsefullArticlesBlock() {
                 font_size="15px"
                 height="15px"
                 margin="5px 0 0 0"
+                onClick={() => menuActive && setMenuActive()}
                 to={"/UsefullArtifical"}
-                onClick={() => setMenuActive(false)}
             >
                 Больше полезных статей...
             </StyleJumpButton>

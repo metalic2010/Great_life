@@ -69,13 +69,12 @@ const MySubMenu = styled.div`
 /**
  * 
  * @param {*} items - список меню
- * @param {*} subItems - вложенный список 
- * @param {*} visible - параметр для показа меню
+ * @param {*} subItems - вложенный список
  * @param {*} setVisible - функция для показа меню (смены состояния)
  * @returns возвращает jsx элемент для отрисовки на странице
  * @description navbar имеет всего 2 уровня и передаётся через 2 props
  */
-const MyNavbar = ({ items, subItems, visible, setVisible }) => {
+const MyNavbar = ({ items, subItems, setVisible }) => {
     const [subVisible, setSubVisible] = useState(false);
     const [height, setHeight] = useState(0);
 
